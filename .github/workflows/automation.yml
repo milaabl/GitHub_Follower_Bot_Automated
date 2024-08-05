@@ -44,4 +44,5 @@ jobs:
           git add -A
           timestamp=$(date -u)
           git commit -m "Works like a clockwork ⏳⌛⌚⏲️: ${timestamp}(UTC)" || exit 0
+          git pull origin main
           git push origin main
