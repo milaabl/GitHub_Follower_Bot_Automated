@@ -1,4 +1,7 @@
-name: GitHub Follower Bot Running
+name: Follow-back GitHub bot
+
+env:
+  GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
 
 on:
   schedule:
@@ -6,7 +9,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Grant write permission to GITHUB_TOKEN
+  contents: write  # Allows committing and pushing changes
+  issues: write    # Allows creating and managing issues
+  pull-requests: write  # Allows managing pull requests
+  actions: write  # Allows updating GitHub Actions workflows
 
 jobs:
   up-and-running:
@@ -24,18 +30,18 @@ jobs:
         run: pip install pipenv --user
       - name: Setup Python virtual environment
         run: |
-          PATH=$PATH:/home/officialcodevoyage/.local/bin
+          PATH=$PATH:/home/milaabl/.local/bin
           pipenv install
       - name: Run Follower bot
         run: |
-          export github_user=officialcodevoyage
+          export github_user=milaabl
           export personal_github_token=${{ secrets.PERSONAL_GITHUB_TOKEN }}
           pipenv run python bot.py
       - name: Commit and push if it changed
         run: |
-          git config user.name "OfficialCodeVoyage"
-          git config user.email "bondarenkopavloua@yahoo.com"
+          git config user.name "milaabl"
+          git config user.email "milaabl2405@gmail.com"
           git add -A
           timestamp=$(date -u)
-          git commit -m "Last Commit: ${timestamp}(UTC)" || exit 0
+          git commit -m "Works like a clockwork ⏳⌛⌚⏲️: ${timestamp}(UTC)" || exit 0
           git push origin main
