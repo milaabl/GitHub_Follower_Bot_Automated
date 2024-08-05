@@ -2,7 +2,7 @@
 
 Welcome to the **GitHub Follower Bot Automated** repository! This project is designed to help you automatically follow your GitHub followers, keeping your network growing and engaged with minimal effort.
 
-:raised_hand::raised_hand::raised_hand:**You Follow Me** ---> **My Bot Follows you Back! Let's growth Together!**:raised_hand::raised_hand::metal:
+:raised_hand::raised_hand::raised_hand:**You Follow Me** ---> **My Bot Follows you Back! Let's grow together!** :raised_hand::raised_hand::metal:
 
 :large_blue_circle::large_blue_circle::large_blue_circle:Let's also connect on **[LinkedIn](https://www.linkedin.com/in/ludmila-a-dev/)**
 
