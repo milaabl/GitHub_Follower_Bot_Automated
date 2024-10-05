@@ -527,3 +527,4 @@ ShaheerAzam
 Amanc77
 shiny0103
 Armi-nn
+secure-firmware
